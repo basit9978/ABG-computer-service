@@ -1,0 +1,490 @@
+*{
+    margin: 0;padding: 0;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background-image: url(images/background.jpg);
+}
+
+header nav .colorlogo img{
+    width: 100px;
+    transition-duration: 0.5s linear;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color:white;
+}
+header nav .navlinks ol{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+header nav .navlinks ol li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition-duration: 0.5s;
+}
+header nav .navlinks ol li:hover a{
+    color:#ff0000;
+}
+header nav .sidebar{
+    display: none;
+}
+header nav .sidebar ol{
+    display: none;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    list-style: none;
+    color:white;
+    background:linear-gradient(to top,red, black);
+    padding: 1rem;
+    z-index: 1;
+   
+
+}
+header nav .sidebar ol li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+}
+header nav .sidebar ol li a{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+header nav .sidebar ol li a span{
+    padding-right: 1rem;
+}
+header nav .sidebar ol li:hover a{
+    border: 1px solid white;
+}
+header nav .sidebar input:checked + ol{
+    display: block;
+    animation: sidebar 0.5s linear;
+}
+@keyframes sidebar {
+    0% {
+        transform: translateX(200px);
+    }
+    100%{
+        transform: translateX(0);
+    }    
+}
+@media (max-width : 520px) {
+    header nav .colorlogo img{
+        width: 60px;
+    }
+    header nav .navlinks ol{
+        display: none;
+    }
+    header nav .sidebar{
+        display: block;
+    }
+    
+}
+header nav .sidebar ol li .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 50px;
+    left: 4rem;
+}
+header nav .sidebar ol li .logo img{
+    width: 25px;
+    filter: invert(100%) sepia(0%) saturate(3720%) hue-rotate(299deg) brightness(106%) contrast(106%);
+}
+header nav .sidebar ol li label span:hover{
+    transition: 0.5s linear;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+header nav .sidebar ol .whitelogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+
+}
+
+header nav .sidebar ol li img{
+    width: 50%;
+}
+
+
+
+
+/* Main content*/
+main{
+    margin: 10px;
+}
+main .intro{
+background-image: url(images/2304.w018.n002.1747B.p15.1747.jpg) ;
+background-size: cover;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+    margin-bottom: 2rem;
+    }
+  
+main .intro h1{
+    color: rgb(255, 255, 255);
+    font-size: 5vw;
+    transition: 0.5s linear;
+    animation: flyin 1s 1;
+}
+@keyframes flyin {
+    0%{
+        transform: translate(-200px);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+main .intro div{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .intro img{
+    width: 85%;
+    transition: 0.5s linear;
+    animation: flyout 1s 1;
+
+}
+@keyframes flyout {
+    0%{
+        transform: translate(200px);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+
+
+
+
+
+
+main .makeus{
+    margin: 0.5rem 0 1rem 0;
+}
+main .makeus .makeheading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+main .makeus .makeheading h1{
+    color: #ff0000;
+    font-size: 2.5rem;
+    transition: 0.5s linear;
+
+}
+@media (max-width: 500px) {
+    main .makeus .makeheading h1{
+        font-size: 1.5rem;
+    }
+    
+}
+main .makeus .makeparts{
+    padding: 1rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+main .makeus .makeparts .makebox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+main .makeus .makeparts .makebox .box1{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+main .makeus .makeparts .makebox .box1:hover{
+    border-color: red;
+}
+main .makeus .makeparts .makebox .box1 img{
+    width: 80%;
+    transition: 0.5s;
+}
+main .makeus .makeparts .makebox  p{
+    padding-top: 0.5rem;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.5s linear;
+}
+main .makeus .makeparts .makebox:hover  p{
+    color: #ff0000;
+}
+main .makeus .makeparts .makebox:hover img{
+    filter: invert(10%) sepia(92%) saturate(7271%) hue-rotate(4deg) brightness(99%) contrast(105%);
+}
+main .makeus .learnmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    
+}
+main .makeus .learnmore button{
+    padding: 0.6rem 1.5rem;
+    background-color:#ff0000;
+    color: white;
+    font-weight: bolder;
+    border: #ff0000 2px solid;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.5s linear;
+}
+main .makeus .learnmore button:hover{
+    background:none;
+    border: #ff0000 2px solid;
+    color: #ff0000;
+    transform:rotateX(360deg);
+}
+
+@media (max-width: 500px) {
+    main .makeus .makeparts .makebox .box1{
+        width: 80px;
+        height: 80px;
+    }main .makeus .makeparts .makebox  p{
+        font-size: 1rem;
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+main .weoffer{
+    margin-top: 1rem;
+}
+main .weoffer .offername{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, black,#ff0000);
+}
+main .weoffer .offername h1{
+    font-size: 2rem;
+    color: white;
+}
+@media (max-width: 500px) {
+    main .weoffer .offername h1{
+        font-size: 1.5rem;
+    }
+    
+}
+main .weoffer .offerbox{
+    margin:1.5rem 0 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+main .weoffer .offerbox .offerboxes{
+    width: 200px;
+    height: 280px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem;
+    gap: 0.8rem;
+    cursor: pointer;
+    transition: 0.5s linear;
+
+}
+main .weoffer .offerbox .offerboxes:hover{
+    transform: scale(1.04);
+    box-shadow: 2px solid rgba(0, 0, 0, 0.349);
+
+
+}
+main .weoffer .offerbox .offerboxes .offerlogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .weoffer .offerbox .offerboxes .offerlogo img{
+    width: 40%;
+}
+main .weoffer .offerbox .offerboxes .offer h1{
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 0.3rem;
+}
+main .weoffer .offerbox .offerboxes .offer p{
+    font-size: 13px;
+    text-align: center;
+}
+
+main .weoffer .offerbox .offerboxes .Availoffer button{
+    appearance: none;
+    border: none;
+    width: 180px;
+    height: 25px;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.5s linear;
+}
+
+main .weoffer .offerbox .offerboxes .Availoffer button:hover{
+    background:none;
+    color: black;
+    border: 2px solid black;
+    transform:rotateX(360deg);
+}
+
+
+
+
+/*Footer*/
+footer{
+    margin-top: 10px;
+}
+footer .footerlast{
+    display: flex;
+    color: white;
+    background:linear-gradient(to left,red, black);
+    justify-content: center;
+    align-self: center;
+    padding: 0.4rem;
+}
+footer .footermain {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-top: 2px black solid;
+}
+footer .footermain div{
+    width: 250px;
+    overflow: hidden;
+    padding: 0.5rem;
+}
+footer .footermain .firstbox{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+footer .footermain .firstbox img{
+    width: 30%;
+    padding-bottom: 1rem;
+}
+footer .footermain .firstbox p{
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+footer .footermain .firstbox p:hover{
+    color: #ff0000;
+}
+footer .footermain .secondbox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .footermain .secondbox h1{
+    font-size: 1.2rem;
+}
+footer .footermain .secondbox ol{
+    list-style: none;
+    margin-left: 2rem;
+}
+footer .footermain .secondbox ol li a{
+    text-decoration: none;
+    color: black;
+    font-weight:500;
+    transition-duration: 0.5s;
+}
+footer .footermain .secondbox ol li a:hover{
+    color: #ff0000;
+}
+footer .footermain .thirdbox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .footermain .thirdbox h1{
+    font-size: 1.3rem;
+}
+footer .footermain .fourthbox {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+footer .footermain .fourthbox img{
+    width: 30px;
+    transition: 0.4s linear;
+}
+footer .footermain .fourthbox img:hover{
+    filter: invert(10%) sepia(92%) saturate(7271%) hue-rotate(4deg) brightness(99%) contrast(105%);
+
+}
+@media (max-width: 500px) {
+    footer .footerlast{
+        font-size: 0.5rem;
+        transition-duration: 0.5s;
+    }
+}

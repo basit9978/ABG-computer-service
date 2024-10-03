@@ -1,0 +1,80 @@
+main .graphicname{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .graphicname img{
+    width: 80%;
+}
+main .pageabout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(to right, Black, #ff0000);
+    color: white;
+    padding: 0.2rem;
+    transition: 0.5s linear;
+}
+@media (max-width: 500px) {
+    main .pageabout h1{
+        font-size: 1rem;
+    }
+    
+}
+main .suboffer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+main .suboffer .subcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.11);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: 350px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s linear;
+}
+main .suboffer .subcard:hover{
+    border-color: black;
+}
+main .suboffer .subcard div img{
+    width: 100px;
+}
+main .suboffer .subcard .subcardname{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+main .suboffer .subcard div p{
+    font-size: 12px;
+    text-align: center;
+}
+main .suboffer .subcard div button{
+    appearance: none;
+    border: none;
+    background-color: black;
+    border-radius: 50px;
+    width: 80%;
+    color: white;
+    height: 1.5rem;
+    cursor: pointer;
+    transition: 0.5s linear;
+}
+main .suboffer .subcard div button:hover{
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+    font-weight: bolder;
+}
